@@ -6,8 +6,7 @@ import {  deleteOne, deleteMany } from "../controllers/User/delete.js"
 import passport from "../middlewares/passport.js"
 import hashPassword from "../middlewares/createHash.js"
 import accountExists from "../middlewares/accountExists.js"
-import validator from "../middlewares/validator.js"
-import userSchema from "../schemas/users/userSchema.js"
+
 
 const userRouter = Router()
 
