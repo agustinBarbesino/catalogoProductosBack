@@ -1,8 +1,8 @@
 import Product from "../../models/Product.js";
 const createProduct = async (req, res, next) => {
     try {
-        await Product.create(req.body);
-        return res.status(201).json({ success: true });
+        const newProduct = await Product.create(req.body);
+        return res.status(201).json({ success: true, product: newProduct });
     } catch (error) {
         next(error);
     }
