@@ -2,9 +2,9 @@ import Product from "../../models/Product.js";
 
 const deleteProduct = async (req, res, next) => {
     try {
-        const product = await Product.findByIdAndDelete(
-            { id: req.params.id });
-        return res.status(200).json(product);
+        const id = req.params.id
+        const product = await Product.findByIdAndDelete(id);
+        return res.status(200).json({ success: true });
     } catch (error) {
         next(error);
     }
