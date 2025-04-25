@@ -8,7 +8,7 @@ const productRouter = Router()
 
 productRouter.get("/all", allProducts)
 productRouter.post("/new", createProduct)
-productRouter.put("/update", updateProduct)
+productRouter.put("/update/:id", updateProduct)
 productRouter.delete("/delete", deleteProduct)
 
 export default productRouter
